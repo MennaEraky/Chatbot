@@ -49,23 +49,6 @@ ES_SCHEME=http
 ES_USERNAME=elastic
 ES_PASSWORD=your_password_here
 
-# Rate Limiting
-RATE_LIMIT_REQUESTS=60
-RATE_LIMIT_PERIOD=60
-
-# Logging
-LOG_LEVEL=INFO
-LOG_FILE=chatbot.log
-
-# Security
-ALLOWED_ORIGINS=http://localhost:3000,https://yourdomain.com
-API_KEY=your_api_key_here
-
-# Cache (Optional)
-CACHE_ENABLED=true
-CACHE_TTL=300
-CACHE_MAX_SIZE=1000
-```
 
 ## Usage
 
@@ -110,8 +93,6 @@ Response:
 ### GET /health
 Health check endpoint.
 
-### GET /metrics
-Prometheus metrics endpoint.
 
 ## Development
 
@@ -122,29 +103,6 @@ The project uses:
 - flake8 for linting
 - mypy for type checking
 
-Run formatting:
-```bash
-black .
-isort .
-```
-
-Run linting:
-```bash
-flake8
-mypy .
-```
-
-### Testing
-Run tests:
-```bash
-pytest
-```
-
-Run tests with coverage:
-```bash
-pytest --cov=.
-```
-
 ## Monitoring
 
 The application includes:
@@ -153,24 +111,6 @@ The application includes:
 - Request/response logging
 - Error tracking
 - Performance monitoring
-
-## Security
-
-- Rate limiting
-- API key authentication
-- CORS configuration
-- Input validation
-- Error handling
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
